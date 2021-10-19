@@ -1,32 +1,28 @@
 % Octave Script
-% Title            :Funcion minimo material
-% Descrption       :Script para graficar una funcion de envase cilindrico
-% Authors          :Erick Gabriel Garcia,Alejandro Garcia Cruz
+% Title            :Actividad 17 Funcion minimo material problema v2
+% Descrption       :Script para la graficacion del problema de la alberca
+% Authors          :Erick Gabriel Garcia, Alejandro Garcia Cruz
 % Date             :202123419
 % Version          :1
-% Usage			       :octave> /path/enviar
-% Notes			       :Se requiere aplicacion Octave
+% Usage			         :octave> /path/actividad17
+% Notes			         :Se requiere aplicacion Octave
 
-%limpiar varaibles 
+%limpiar variables 
  clear
-%Ejemplo minimo de material para envase cilindrico
-%Rango de 0..1 en i=0.1
- r=0:0.1:1;
-%Valor de la funsion 
- ar=0(r) (pi() * (r.*2)) * (2./(r));
-%funcion a plotear
- y=(pi() * (r.*2)) + (2./(r));
-%funsion para determinar valor minimo
-resr = fminbnd(ar,0,1);
-%Dibujar
- plot(r, y);
-%Titulo
- title(['Minimo material r = ' num2str(resr)]);
-%Etiqueta para x
- xlabel(['Minimo r = ' num2str(resr)]);
-%Etiqueta para y
- ylabel(['Min y = ' num2str( ar(resr))]);
- 
+%titulo
+disp ('Problema V2 ¨La alberca¨');
+%Rango
+b=0:0.01:10;
+%Valor de la funcion
+ar=@(r) (80)/(r)+(2*r);
+%Funcion a plotear
+fun=(80/x)+(x*2);
+%Funcion para determinar valor minimo
+b= fminbnd(ar,0,10);
+a= (40)/6.324;
+%graficar
+ezplot((80/x)+(x*2));
+disp("Podemos deducir que el valor de los lados es: "), b, a
 
 
 
